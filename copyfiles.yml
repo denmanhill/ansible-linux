@@ -5,4 +5,15 @@
   vars:
   tasks:
   - name: Copy Files
-    command: rclone copy /SINGLEPOOL/home/config googledrive:files
+    command: rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
+    command: rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
+    command: rclone copy /SINGLEPOOL/home/config/guacamole googledrive:files/config/guacamole
+    command: rclone copy /SINGLEPOOL/home/config/heimdall googledrive:files/config/heimdall
+    command: rclone copy /SINGLEPOOL/home/config/sonarr googledrive:files/config/sonarr
+    command: rclone copy /SINGLEPOOL/home/config/portainer googledrive:files/config/portainer
+    command: rclone copy /SINGLEPOOL/home/config/nextcloud googledrive:files/config/nextcloud
+    command: rclone copy /SINGLEPOOL/home/config/grafana googledrive:files/config/grafana
+    command: rclone copy /SINGLEPOOL/home/config/traefik googledrive:files/config/traefik
+    command: rclone copy /SINGLEPOOL/home/config/telegraf googledrive:files/config/telegraf
+    command: rclone copy /SINGLEPOOL/home/config/tautulli googledrive:files/config/tautulli
+    command: rclone copy /SINGLEPOOL/home/config/radarr googledrive:files/config/radarr
