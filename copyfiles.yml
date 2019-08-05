@@ -1,0 +1,10 @@
+---
+- hosts: AnsibleHost
+  gather_facts: no
+  connection: local
+  vars:
+  tasks:
+  - name: Copy Files
+    copy  :
+      src: /SINGLEPOOL/home/config
+      dest: /GOOGLEPOOL/home/config
