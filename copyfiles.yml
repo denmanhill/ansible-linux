@@ -5,7 +5,4 @@
   vars:
   tasks:
   - name: Copy Files
-    copy  :
-      remote_src: yes
-      src: /SINGLEPOOL/home/config
-      dest: /GOOGLEPOOL/home/config
+    command: rclone copy /SINGLEPOOL/home/config googledrive:files
