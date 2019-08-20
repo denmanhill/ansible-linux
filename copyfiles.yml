@@ -6,12 +6,13 @@
   - name: Stop Elasticsearch
     docker_container:
       name: elasticsearch
+      image: "test"
       state: stopped
   
   - name: Backup Elasticsearch
     command: "{{ item }}"
     with_items:
-      - rclone copy /SINGLEPOOL/home/config/Elasticsearch googledrive:files/config/Elasticsearch
+      - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
    
   - name: Start Elasticsearch
     docker_container:
