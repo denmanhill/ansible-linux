@@ -7,12 +7,10 @@
     command: "{{ item }}"
     with_items:
       - rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
-      - rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
       - rclone copy /SINGLEPOOL/home/config/guacamole googledrive:files/config/guacamole
       - rclone copy /SINGLEPOOL/home/config/heimdall googledrive:files/config/heimdall
       - rclone copy /SINGLEPOOL/home/config/sonarr googledrive:files/config/sonarr
       - rclone copy /SINGLEPOOL/home/config/portainer googledrive:files/config/portainer
-      - rclone copy /SINGLEPOOL/home/config/nextcloud googledrive:files/config/nextcloud
       - rclone copy /SINGLEPOOL/home/config/grafana googledrive:files/config/grafana
       - rclone copy /SINGLEPOOL/home/config/traefik googledrive:files/config/traefik
       - rclone copy /SINGLEPOOL/home/config/telegraf googledrive:files/config/telegraf
