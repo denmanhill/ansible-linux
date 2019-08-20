@@ -3,7 +3,22 @@
   gather_facts: no
   vars:
   tasks:
-  - name: Copy Files
+  - name: Stop Elasticsearch
+    docker_container:
+      name: elasticsearch
+      state: stopped
+  
+  - name: Backup Elasticsearch
+    command: "{{ item }}"
+    with_items:
+      - rclone copy /SINGLEPOOL/home/config/Elasticsearch googledrive:files/config/Elasticsearch
+   
+   - name: Start Elasticsearch
+    docker_container:
+      name: elasticsearch
+      state: started      
+      
+  - name: Backup all other config files
     command: "{{ item }}"
     with_items:
       - rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
