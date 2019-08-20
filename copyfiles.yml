@@ -8,6 +8,7 @@
     with_items:
       - rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
       - rclone copy /SINGLEPOOL/home/config/guacamole googledrive:files/config/guacamole
+      - rclone copy /SINGLEPOOL/home/config/guacamole googledrive:files/config/guacd
       - rclone copy /SINGLEPOOL/home/config/heimdall googledrive:files/config/heimdall
       - rclone copy /SINGLEPOOL/home/config/sonarr googledrive:files/config/sonarr
       - rclone copy /SINGLEPOOL/home/config/portainer googledrive:files/config/portainer
@@ -16,3 +17,6 @@
       - rclone copy /SINGLEPOOL/home/config/telegraf googledrive:files/config/telegraf
       - rclone copy /SINGLEPOOL/home/config/tautulli googledrive:files/config/tautulli
       - rclone copy /SINGLEPOOL/home/config/radarr googledrive:files/config/radarr
+      - rclone copy /SINGLEPOOL/home/config/cloudflare-ddns googledrive:files/config/cloudflare-ddns
+      - rclone copy /SINGLEPOOL/home/config/filebeat googledrive:files/config/filebeat
+
