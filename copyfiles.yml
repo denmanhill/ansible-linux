@@ -6,7 +6,7 @@
   - name: Stop Elasticsearch
     docker_container:
       name: elasticsearch
-      image: "test"
+      image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
       state: stopped
   
   - name: Backup Elasticsearch
@@ -17,6 +17,7 @@
   - name: Start Elasticsearch
     docker_container:
       name: elasticsearch
+      image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
       state: started      
       
   - name: Backup all other config files
