@@ -36,4 +36,9 @@
       - rclone copy /SINGLEPOOL/home/config/radarr googledrive:files/config/radarr
       - rclone copy /SINGLEPOOL/home/config/cloudflare-ddns googledrive:files/config/cloudflare-ddns
       - rclone copy /SINGLEPOOL/home/config/filebeat googledrive:files/config/filebeat
-
+      - rclone copy /SINGLEPOOL/home/config/piaopenvpn googledrive:files/config/piaopenvpn
+      - rclone copy /SINGLEPOOL/home/config/python googledrive:files/config/python      
+      - rclone copy /SINGLEPOOL/home/config/nzbget googledrive:files/config/nzbget
+      - rclone copy /SINGLEPOOL/home/config/deluge googledrive:files/config/deluge           
+      - rclone copy /SINGLEPOOL/home/config/rpi googledrive:files/config/rpi
+      - rclone copy /SINGLEPOOL/home/config/scripts googledrive:files/config/scripts
