@@ -4,10 +4,7 @@
   vars:
   tasks:
   - name: Stop Elasticsearch
-    docker_container:
-      name: elasticsearch
-      image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
-      state: stopped
+    command: docker stop elasticsearch
   
   - name: Backup Elasticsearch
     command: "{{ item }}"
@@ -15,10 +12,7 @@
       - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
    
   - name: Start Elasticsearch
-    docker_container:
-      name: elasticsearch
-      image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
-      state: started      
+    command: docker start elasticsearch  
       
   - name: Backup all other config files
     command: "{{ item }}"
