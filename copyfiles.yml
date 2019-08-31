@@ -3,16 +3,23 @@
   gather_facts: no
   vars:
   tasks:
-  - name: Stop Elasticsearch
-    command: docker stop elasticsearch
+  - name: Stop databases
+    command: "{{ item }}"
+    with_items:
+      - docker stop elasticsearch
+      - docker stop influxdb
   
   - name: Backup Elasticsearch
     command: "{{ item }}"
     with_items:
       - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
+      - rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
    
-  - name: Start Elasticsearch
-    command: docker start elasticsearch  
+  - name: Start databases
+    command: "{{ item }}"
+    with_items:
+      - docker start elasticsearch
+      - docker start influxdb
       
   - name: Backup all other config files
     command: "{{ item }}"
