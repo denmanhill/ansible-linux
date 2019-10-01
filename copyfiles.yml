@@ -9,6 +9,8 @@
       - docker stop elasticsearch
       - docker stop influxdb
       - docker stop plex
+      - docker stop postgres
+      - docker stop mysql
   
   - name: Backup Elasticsearch
     command: "{{ item }}"
@@ -16,13 +18,17 @@
       - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
       - rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
       - rclone copy /SINGLEPOOL/home/config/plex googledrive:files/config/plex
-   
+      - rclone copy /SINGLEPOOL/home/config/postgres googledrive:files/config/postgres
+      - rclone copy /SINGLEPOOL/home/config/mysql googledrive:files/config/mysql      
+      
   - name: Start databases
     command: "{{ item }}"
     with_items:
       - docker start elasticsearch
       - docker start influxdb
       - docker start plex
+      - docker start postgres
+      - docker start mysql
       
   - name: Backup all other config files
     command: "{{ item }}"
@@ -51,3 +57,4 @@
       - rclone copy /SINGLEPOOL/home/config/calibre-web googledrive:files/config/calibre-web
       - rclone copy /SINGLEPOOL/home/config/cloudflareddns googledrive:files/config/cloudflareddns
       - rclone copy /SINGLEPOOL/home/config/nextcloud googledrive:files/config/nextcloud
+      - rclone copy /SINGLEPOOL/home/config/awx googledrive:files/config/awx      
