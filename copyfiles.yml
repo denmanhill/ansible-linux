@@ -3,14 +3,15 @@
   gather_facts: no
   vars:
   tasks:
-  - name: Stop databases
+  - name: Stop containers
     command: "{{ item }}"
     with_items:
       - docker stop elasticsearch
       - docker stop influxdb
       - docker stop mysql
+      - docker stop postgres
   
-  - name: Backup Elasticsearch
+  - name: Backup config files
     command: "{{ item }}"
     with_items:
       - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
@@ -18,12 +19,13 @@
       - rclone copy /SINGLEPOOL/home/config/postgres googledrive:files/config/postgres
       - rclone copy /SINGLEPOOL/home/config/mysql googledrive:files/config/mysql      
       
-  - name: Start databases
+  - name: Start containers
     command: "{{ item }}"
     with_items:
       - docker start elasticsearch
       - docker start influxdb
       - docker start mysql
+      - docker stop postgres
       
   - name: Backup all other config files
     command: "{{ item }}"
