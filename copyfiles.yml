@@ -8,7 +8,6 @@
     with_items:
       - docker stop elasticsearch
       - docker stop influxdb
-      - docker stop plex
       - docker stop postgres
       - docker stop mysql
   
@@ -17,7 +16,6 @@
     with_items:
       - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
       - rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
-      - rclone copy /SINGLEPOOL/home/config/plex googledrive:files/config/plex
       - rclone copy /SINGLEPOOL/home/config/postgres googledrive:files/config/postgres
       - rclone copy /SINGLEPOOL/home/config/mysql googledrive:files/config/mysql      
       
@@ -26,7 +24,6 @@
     with_items:
       - docker start elasticsearch
       - docker start influxdb
-      - docker start plex
       - docker start postgres
       - docker start mysql
       
