@@ -8,7 +8,6 @@
     with_items:
       - docker stop elasticsearch
       - docker stop influxdb
-      - docker stop postgres
       - docker stop mysql
   
   - name: Backup Elasticsearch
@@ -24,7 +23,6 @@
     with_items:
       - docker start elasticsearch
       - docker start influxdb
-      - docker start postgres
       - docker start mysql
       
   - name: Backup all other config files
