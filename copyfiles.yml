@@ -16,12 +16,12 @@
   - name: Backup config files
     command: "{{ item }}"
     with_items:
-      - rclone copy /SINGLEPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
-      - rclone copy /SINGLEPOOL/home/config/influxdb googledrive:files/config/influxdb
-      - rclone copy /SINGLEPOOL/home/config/mysql googledrive:files/config/mysql
-      - rclone copy /SINGLEPOOL/home/config/python googledrive:files/config/python
-      - rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
-      - rclone copy /SINGLEPOOL/home/config/nextcloud googledrive:files/config/nextcloud
+      - rclone copy /SSDPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
+      - rclone copy /SSDPOOL/home/config/influxdb googledrive:files/config/influxdb
+      - rclone copy /SSDPOOL/home/config/mysql googledrive:files/config/mysql
+      - rclone copy /SSDPOOL/home/config/python googledrive:files/config/python
+      - rclone copy /SSDPOOL/home/config/pihole googledrive:files/config/pihole
+      - rclone copy /SSDPOOL/home/config/nextcloud googledrive:files/config/nextcloud
       
   - name: Start containers
     command: "{{ item }}"
@@ -36,26 +36,26 @@
   - name: Backup all other config files
     command: "{{ item }}"
     with_items:
-      - rclone copy /SINGLEPOOL/home/config/pihole googledrive:files/config/pihole
-      - rclone copy /SINGLEPOOL/home/config/guacamole googledrive:files/config/guacamole
-      - rclone copy /SINGLEPOOL/home/config/guacamoleinternal googledrive:files/config/guacamoleinternal
-      - rclone copy /SINGLEPOOL/home/config/guacd googledrive:files/config/guacd
-      - rclone copy /SINGLEPOOL/home/config/guacdinternal googledrive:files/config/guacdinternal
-      - rclone copy /SINGLEPOOL/home/config/heimdall googledrive:files/config/heimdall
-      - rclone copy /SINGLEPOOL/home/config/sonarr googledrive:files/config/sonarr
-      - rclone copy /SINGLEPOOL/home/config/portainer googledrive:files/config/portainer
-      - rclone copy /SINGLEPOOL/home/config/grafana googledrive:files/config/grafana
-      - rclone copy /SINGLEPOOL/home/config/traefik googledrive:files/config/traefik
-      - rclone copy /SINGLEPOOL/home/config/telegraf googledrive:files/config/telegraf
-      - rclone copy /SINGLEPOOL/home/config/tautulli googledrive:files/config/tautulli
-      - rclone copy /SINGLEPOOL/home/config/radarr googledrive:files/config/radarr
-      - rclone copy /SINGLEPOOL/home/config/ddclient googledrive:files/config/ddclient
-      - rclone copy /SINGLEPOOL/home/config/filebeat googledrive:files/config/filebeat
-      - rclone copy /SINGLEPOOL/home/config/piaopenvpn googledrive:files/config/piaopenvpn
-      - rclone copy /SINGLEPOOL/home/config/nzbget googledrive:files/config/nzbget
-      - rclone copy /SINGLEPOOL/home/config/deluge googledrive:files/config/deluge           
-      - rclone copy /SINGLEPOOL/home/config/rpi googledrive:files/config/rpi
-      - rclone copy /SINGLEPOOL/home/config/scripts googledrive:files/config/scripts
-      - rclone copy /SINGLEPOOL/home/config/calibre-web googledrive:files/config/calibre-web
-      - rclone copy /SINGLEPOOL/home/config/cloudflareddns googledrive:files/config/cloudflareddns
-      - rclone copy /SINGLEPOOL/home/config/awx googledrive:files/config/awx      
+      - rclone copy /SSDPOOL/home/config/pihole googledrive:files/config/pihole
+      - rclone copy /SSDPOOL/home/config/guacamole googledrive:files/config/guacamole
+      - rclone copy /SSDPOOL/home/config/guacamoleinternal googledrive:files/config/guacamoleinternal
+      - rclone copy /SSDPOOL/home/config/guacd googledrive:files/config/guacd
+      - rclone copy /SSDPOOL/home/config/guacdinternal googledrive:files/config/guacdinternal
+      - rclone copy /SSDPOOL/home/config/heimdall googledrive:files/config/heimdall
+      - rclone copy /SSDPOOL/home/config/sonarr googledrive:files/config/sonarr
+      - rclone copy /SSDPOOL/home/config/portainer googledrive:files/config/portainer
+      - rclone copy /SSDPOOL/home/config/grafana googledrive:files/config/grafana
+      - rclone copy /SSDPOOL/home/config/traefik googledrive:files/config/traefik
+      - rclone copy /SSDPOOL/home/config/telegraf googledrive:files/config/telegraf
+      - rclone copy /SSDPOOL/home/config/tautulli googledrive:files/config/tautulli
+      - rclone copy /SSDPOOL/home/config/radarr googledrive:files/config/radarr
+      - rclone copy /SSDPOOL/home/config/ddclient googledrive:files/config/ddclient
+      - rclone copy /SSDPOOL/home/config/filebeat googledrive:files/config/filebeat
+      - rclone copy /SSDPOOL/home/config/piaopenvpn googledrive:files/config/piaopenvpn
+      - rclone copy /SSDPOOL/home/config/nzbget googledrive:files/config/nzbget
+      - rclone copy /SSDPOOL/home/config/deluge googledrive:files/config/deluge           
+      - rclone copy /SSDPOOL/home/config/rpi googledrive:files/config/rpi
+      - rclone copy /SSDPOOL/home/config/scripts googledrive:files/config/scripts
+      - rclone copy /SSDPOOL/home/config/calibre-web googledrive:files/config/calibre-web
+      - rclone copy /SSDPOOL/home/config/cloudflareddns googledrive:files/config/cloudflareddns
+      - rclone copy /SSDPOOL/home/config/awx googledrive:files/config/awx      
