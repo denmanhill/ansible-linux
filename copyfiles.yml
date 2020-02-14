@@ -12,6 +12,7 @@
       - docker stop pythontest
       - docker stop pihole
       - docker stop nextcloud
+      - docker stop plex
       
   - name: Backup config files
     command: "{{ item }}"
@@ -32,7 +33,8 @@
       - docker start pythontest
       - docker start pihole
       - docker start nextcloud
-      
+      - docker start plex
+
   - name: Backup all other config files
     command: "{{ item }}"
     with_items:
