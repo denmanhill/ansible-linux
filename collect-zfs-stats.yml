@@ -4,5 +4,5 @@
   vars:
   tasks:
   - name: Execute Script
-    command: python /SINGLEPOOL/home/config/scripts/zfs_stats.py "192.168.2.7"
+    command: python /SSDPOOL/home/config/scripts/zfs_stats.py "192.168.2.7"
   
