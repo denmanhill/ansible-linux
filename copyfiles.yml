@@ -9,9 +9,7 @@
       - docker stop elasticsearch
       - docker stop influxdb
       - docker stop mysql
-      - docker stop pythontest
       - docker stop pihole
-      - docker stop nextcloud
       - docker stop plex
       
   - name: Backup config files
@@ -22,7 +20,6 @@
       - rclone copy /SSDPOOL/home/config/mysql googledrive:files/config/mysql
       - rclone copy /SSDPOOL/home/config/python googledrive:files/config/python
       - rclone copy /SSDPOOL/home/config/pihole googledrive:files/config/pihole
-      - rclone copy /SSDPOOL/home/config/nextcloud googledrive:files/config/nextcloud
       
   - name: Start containers
     command: "{{ item }}"
@@ -30,9 +27,7 @@
       - docker start elasticsearch
       - docker start influxdb
       - docker start mysql
-      - docker start pythontest
       - docker start pihole
-      - docker start nextcloud
       - docker start plex
 
   - name: Backup all other config files
