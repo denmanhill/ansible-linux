@@ -6,7 +6,7 @@
   - name: Stop containers
     command: "{{ item }}"
     with_items:
-      - docker stop elasticsearch
+#      - docker stop elasticsearch
       - docker stop influxdb
       - docker stop mysql
       - docker stop pihole
@@ -15,7 +15,7 @@
   - name: Backup config files
     command: "{{ item }}"
     with_items:
-      - rclone copy /SSDPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
+#      - rclone copy /SSDPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
       - rclone copy /SSDPOOL/home/config/influxdb googledrive:files/config/influxdb
       - rclone copy /SSDPOOL/home/config/mysql googledrive:files/config/mysql
       - rclone copy /SSDPOOL/home/config/python googledrive:files/config/python
@@ -24,7 +24,7 @@
   - name: Start containers
     command: "{{ item }}"
     with_items:
-      - docker start elasticsearch
+#      - docker start elasticsearch
       - docker start influxdb
       - docker start mysql
       - docker start pihole
