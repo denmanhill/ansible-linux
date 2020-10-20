@@ -39,8 +39,9 @@
       - rclone copy /SSDPOOL/home/config/guacd GOOGLEPOOL:files/config/guacd
       - rclone copy /SSDPOOL/home/config/guacdinternal GOOGLEPOOL:files/config/guacdinternal
       - rclone copy /SSDPOOL/home/config/heimdall GOOGLEPOOL:files/config/heimdall
+      - rclone copy /SSDPOOL/home/config/heimdalldenmans GOOGLEPOOL:files/config/heimdalldenmans      
       - rclone copy /SSDPOOL/home/config/sonarr GOOGLEPOOL:files/config/sonarr
-      - rclone copy /SSDPOOL/home/config/portainer GOOGLEPOOL:files/config/portainer
+      - rclone copy /SSDPOOL/home/config/portainer2 GOOGLEPOOL:files/config/portainer2
       - rclone copy /SSDPOOL/home/config/grafana GOOGLEPOOL:files/config/grafana
       - rclone copy /SSDPOOL/home/config/traefik GOOGLEPOOL:files/config/traefik
       - rclone copy /SSDPOOL/home/config/telegraf GOOGLEPOOL:files/config/telegraf
@@ -55,4 +56,11 @@
       - rclone copy /SSDPOOL/home/config/scripts GOOGLEPOOL:files/config/scripts
       - rclone copy /SSDPOOL/home/config/calibre-web GOOGLEPOOL:files/config/calibre-web
       - rclone copy /SSDPOOL/home/config/cloudflareddns GOOGLEPOOL:files/config/cloudflareddns
-      - rclone copy /SSDPOOL/home/config/awx GOOGLEPOOL:files/config/awx      
+      - rclone copy /SSDPOOL/home/config/awx GOOGLEPOOL:files/config/awx
+      - rclone copy /SSDPOOL/home/config/unifi GOOGLEPOOL:files/config/unifi
+      - rclone copy /SSDPOOL/home/config/statping GOOGLEPOOL:files/config/statping
+      - rclone copy /SSDPOOL/home/config/scrutiny GOOGLEPOOL:files/config/scrutiny
+      - rclone copy /SSDPOOL/home/config/bookstack GOOGLEPOOL:files/config/bookstack
+      - rclone copy /SSDPOOL/home/config/scrutiny GOOGLEPOOL:files/config/scrutiny      
+      
+      
