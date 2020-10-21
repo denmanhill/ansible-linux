@@ -20,6 +20,7 @@
       - rclone copy /SSDPOOL/home/config/mysql GOOGLEPOOL:files/config/mysql
       - rclone copy /SSDPOOL/home/config/python GOOGLEPOOL:files/config/python
       - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
+    ignore_errors: True      
       
   - name: Start containers
     command: "{{ item }}"
