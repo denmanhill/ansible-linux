@@ -10,7 +10,7 @@
       - docker stop influxdb
       - docker stop mysql
       - docker stop pihole
-      - docker stop plex
+#      - docker stop plex
       
   - name: Backup config files
     command: "{{ item }}"
@@ -18,7 +18,7 @@
 #      - rclone copy /SSDPOOL/home/config/elasticsearch googledrive:files/config/elasticsearch
       - rclone copy /SSDPOOL/home/config/influxdb GOOGLEPOOL:files/config/influxdb
       - rclone copy /SSDPOOL/home/config/mysql GOOGLEPOOL:files/config/mysql
-      - rclone copy /SSDPOOL/home/config/python GOOGLEPOOL:files/config/python
+#      - rclone copy /SSDPOOL/home/config/python GOOGLEPOOL:files/config/python
       - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
     ignore_errors: True      
       
@@ -29,12 +29,12 @@
       - docker start influxdb
       - docker start mysql
       - docker start pihole
-      - docker start plex
+#      - docker start plex
 
   - name: Backup all other config files
     command: "{{ item }}"
     with_items:
-      - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
+#      - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
       - rclone copy /SSDPOOL/home/config/guacamole GOOGLEPOOL:files/config/guacamole
       - rclone copy /SSDPOOL/home/config/guacamoleinternal GOOGLEPOOL:files/config/guacamoleinternal
       - rclone copy /SSDPOOL/home/config/guacd GOOGLEPOOL:files/config/guacd
@@ -63,5 +63,6 @@
       - rclone copy /SSDPOOL/home/config/scrutiny GOOGLEPOOL:files/config/scrutiny
       - rclone copy /SSDPOOL/home/config/bookstack GOOGLEPOOL:files/config/bookstack
       - rclone copy /SSDPOOL/home/config/scrutiny GOOGLEPOOL:files/config/scrutiny      
+      - rclone copy /SSDPOOL/home/config/python GOOGLEPOOL:files/config/python      
       
       
