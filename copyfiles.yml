@@ -9,7 +9,7 @@
 #      - docker stop elasticsearch
       - docker stop influxdb
       - docker stop mysql
-      - docker stop pihole
+#      - docker stop pihole
 #      - docker stop plex
       
   - name: Backup config files
@@ -19,7 +19,7 @@
       - rclone copy /SSDPOOL/home/config/influxdb GOOGLEPOOL:files/config/influxdb
       - rclone copy /SSDPOOL/home/config/mysql GOOGLEPOOL:files/config/mysql
 #      - rclone copy /SSDPOOL/home/config/python GOOGLEPOOL:files/config/python
-      - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
+#      - rclone copy /SSDPOOL/home/config/pihole GOOGLEPOOL:files/config/pihole
     ignore_errors: True      
       
   - name: Start containers
@@ -28,7 +28,7 @@
 #      - docker start elasticsearch
       - docker start influxdb
       - docker start mysql
-      - docker start pihole
+#      - docker start pihole
 #      - docker start plex
 
   - name: Backup all other config files
